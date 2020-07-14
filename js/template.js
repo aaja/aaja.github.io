@@ -13,6 +13,7 @@
             success: function (msg) {
                 $("#img-sending").hide();
                 var msg = msg.MAIL_SUCCESS;
+                msg = "发送成功";
                 $('#mail-send-msg').html(msg).removeClass('mail-send-error').addClass('mail-send-success');
                 $('#email').val('Email');
                 $('#name').val('Name');
@@ -23,6 +24,7 @@
                 var msg = err.responseText;
                 if (msg.lastIndexOf('MAIL_ERROR') > -1)
                     msg = msg.replace('MAIL_ERROR', '~').split('~')[1];
+                    msg = "发送失败";
                 $('#mail-send-msg').html(msg).removeClass('mail-send-success').addClass('mail-send-error');
             }
         });

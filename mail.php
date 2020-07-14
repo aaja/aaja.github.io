@@ -30,7 +30,7 @@ function smtpmailer($from, $from_name, $body) {
 	$mail->FromName = '发件人昵称';
 	$mail->Username = 'crystalaalx@163.com';
 	$mail->Password = 'TPPWOAYUFRCGFOAI';
-	$mail->From = $from;
+	$mail->SetFrom($from, $from_name);
 	$mail->isHTML(true);
 	$mail->addAddress('jiujun0520@163.com');
 	$mail->Subject = '来自www.sujiujun.com的邮件';
