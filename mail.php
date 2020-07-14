@@ -53,7 +53,6 @@ function readMailSettings()
 	while(!feof($file))
 	{
 		$setting = explode(':',fgets($file));
-		//print_r($setting);	
 		switch($setting[0])
 		{
 			case 'SMTPSERVER':
